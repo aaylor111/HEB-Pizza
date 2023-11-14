@@ -1,0 +1,81 @@
+<div class="order-form-container">
+    <h1>New Order</h1>
+    <form class="form-container" [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Table Number</mat-label>
+            <mat-select required formControlName="tableNumber">
+                <mat-option>No Selection</mat-option>
+                <mat-option [value]="1">1</mat-option>
+                <mat-option [value]="2">2</mat-option>
+                <mat-option [value]="3">3</mat-option>
+                <mat-option [value]="4">4</mat-option>
+                <mat-option [value]="5">5</mat-option>
+                <mat-option [value]="6">6</mat-option>
+                <mat-option [value]="7">7</mat-option>
+                <mat-option [value]="8">8</mat-option>
+                <mat-option [value]="9">9</mat-option>
+                <mat-option [value]="10">10</mat-option>
+                <mat-option [value]="11">11</mat-option>
+                <mat-option [value]="12">12</mat-option>
+                <mat-option [value]="13">13</mat-option>
+                <mat-option [value]="14">14</mat-option>
+                <mat-option [value]="15">15</mat-option>
+                <mat-option [value]="16">16</mat-option>
+                <mat-option [value]="17">17</mat-option>
+                <mat-option [value]="18">18</mat-option>
+                <mat-option [value]="19">19</mat-option>
+                <mat-option [value]="20">20</mat-option>
+            </mat-select>
+            <mat-hint align="start">Enter the table number where the customer is seated</mat-hint>
+            @if (tableNumber?.hasError('required')) {
+                <mat-error>This field is required</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Size</mat-label>
+            <mat-select required formControlName="size">
+                <mat-option>No Selection</mat-option>
+                <mat-option [value]="'S'">Small</mat-option>
+                <mat-option [value]="'M'">Medium</mat-option>
+                <mat-option [value]="'L'">Large</mat-option>
+            </mat-select>
+            @if (size?.hasError('required')) {
+                <mat-error>This field is required</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Crust</mat-label>
+            <mat-select required formControlName="crust">
+                <mat-option>No Selection</mat-option>
+                <mat-option [value]="'Thin'">Thin</mat-option>
+                <mat-option [value]="'Thick'">Thick</mat-option>
+                <mat-option [value]="'Stuffed'">Stuffed</mat-option>
+            </mat-select>
+            @if (crust?.hasError('required')) {
+                <mat-error>This field is required</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Flavor</mat-label>
+            <mat-select required formControlName="flavor">
+                <mat-option>No Selection</mat-option>
+                <mat-option [value]="'Cheese'">Cheese</mat-option>
+                <mat-option [value]="'Pepperoni'">Pepperoni</mat-option>
+                <mat-option [value]="'Veggie'">Veggie</mat-option>
+                <mat-option [value]="'Meat'">Meat</mat-option>
+                <mat-option [value]="'BBQ Chicken'">BBQ Chicken</mat-option>
+                <mat-option [value]="'Hawaiian'">Hawaiian</mat-option>
+            </mat-select>
+            @if (flavor?.hasError('required')) {
+                <mat-error>This field is required</mat-error>
+            }
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit" [disabled]="!orderForm.valid">Order Pizza</button>
+
+    </form>
+</div>

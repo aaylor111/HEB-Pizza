@@ -1,0 +1,18 @@
+.header-container {
+    display: flex;
+    width: 100%;
+}
+h1 {
+    padding: 25px;
+}
+.header-container button {
+    margin: 15px;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+.button-overlay {
+    position: fixed !important;
+    right: 20px;
+    bottom: 40px;
+}

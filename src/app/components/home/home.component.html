@@ -1,0 +1,14 @@
+<div class="header-container">
+    <h1>Orders</h1>
+    <span class="spacer"></span>
+    <button mat-icon-button id="filters" (click)="filterOrders()">
+        <mat-icon>filter_list</mat-icon>
+    </button>
+</div>
+<app-orders></app-orders>
+<div class="button-overlay">
+    <button mat-fab extended (click)="newOrder()">
+        <mat-icon>local_pizza</mat-icon>
+         Order
+    </button>
+</div>

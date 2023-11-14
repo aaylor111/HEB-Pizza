@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>Do you want to cancel the order?</h2>
+<mat-dialog-content>This will cancel the order and cannot be undone.</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button mat-button [mat-dialog-close]="true">Yes</button>
+</mat-dialog-actions>

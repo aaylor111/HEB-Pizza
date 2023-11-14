@@ -1,0 +1,14 @@
+<mat-card class="order-card">
+
+    <mat-card-header>
+      <mat-card-title>Table {{ order.Table_No }}</mat-card-title>
+      <mat-card-subtitle>{{order.Flavor}} Pizza, Size: {{order.Size}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image src="/assets/images/pizza-2.jpg" alt="Photo of a Pizza">
+
+    <mat-card-actions align="end">
+      <button mat-button (click)="confirmCancelOrder()">CANCEL</button>
+    </mat-card-actions>
+
+  </mat-card>

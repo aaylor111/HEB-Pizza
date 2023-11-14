@@ -1,0 +1,5 @@
+<div class="orders-container">
+    @for (order of filteredOrders; track order.Order_ID) {
+       <app-order [order]="order"></app-order>
+      }
+</div>

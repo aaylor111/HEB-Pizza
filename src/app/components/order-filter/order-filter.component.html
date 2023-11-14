@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Filter the orders</h2>
+<mat-dialog-content>Select one or more order filters.</mat-dialog-content>
+<form class="form-container" [formGroup]="filterForm">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Size</mat-label>
+        <mat-select formControlName="size">
+            <mat-option>No Selection</mat-option>
+            <mat-option [value]="'S'">Small</mat-option>
+            <mat-option [value]="'M'">Medium</mat-option>
+            <mat-option [value]="'L'">Large</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Crust</mat-label>
+        <mat-select formControlName="crust">
+            <mat-option>No Selection</mat-option>
+            <mat-option [value]="'Thin'">Thin</mat-option>
+            <mat-option [value]="'Thick'">Thick</mat-option>
+            <mat-option [value]="'Stuffed'">Stuffed</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Flavor</mat-label>
+        <mat-select formControlName="flavor">
+            <mat-option>No Selection</mat-option>
+            <mat-option [value]="'Cheese'">Cheese</mat-option>
+            <mat-option [value]="'Pepperoni'">Pepperoni</mat-option>
+            <mat-option [value]="'Veggie'">Veggie</mat-option>
+            <mat-option [value]="'Meat'">Meat</mat-option>
+            <mat-option [value]="'BBQ Chicken'">BBQ Chicken</mat-option>
+            <mat-option [value]="'Hawaiian'">Hawaiian</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button mat-button [mat-dialog-close]="filters">Apply Filters</button>
+</mat-dialog-actions>
